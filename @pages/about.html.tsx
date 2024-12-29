@@ -6,7 +6,7 @@ import Layout from '@/components/Layout';
 const MainContent = () => {
     return (
         <>
-            <p>Sub page here.</p>
+            <p>Testing. </p>
         </>
     )
 
@@ -21,7 +21,7 @@ const About = () => {
     return (
         <>
             <Head>
-                <title>About</title>
+                <title>Testing</title>
             </Head>
 
 

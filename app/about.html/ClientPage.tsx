@@ -7,7 +7,7 @@ import Layout from '@/components/Layout';
 const MainContent = () => {
     return (
         <>
-            <p>Sub page here.</p>
+            <p>This is a web app made by me to see </p>
    
         </>
     )

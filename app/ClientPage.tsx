@@ -14,7 +14,7 @@ const MainContent = () => {
     return (
         <>
             <p>
-                A website-building solution based on Next.js. It serves as a case to sort out the thinking.
+                Welcome to Shaka Shifts! Please log in or sign up to manage your shifts.
             </p>
             <p className="buttons">
                 <Button bgColor='' btnName={<><SvgIcon width="15" style={{ verticalAlign: 'text-top', marginRight: '10px' }} fill="#0576a0" />About US</>} href="/about.html" />
@@ -45,7 +45,7 @@ export default function ClientPage(props) {
             <Layout
                 isHome={true}
                 ssrNav={props.list}
-                pageTitle="HomePage"
+                pageTitle="Aloha!"
                 contentComponent={<><MainContent /></>}
             />
 

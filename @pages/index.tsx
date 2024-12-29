@@ -19,7 +19,7 @@ const MainContent = () => {
     return (
         <>
             <p>
-                A website-building solution based on Next.js. It serves as a case to sort out the thinking.
+                Welcome to Shaka Shifts!
             </p>
             <p className="buttons">
                 <Button bgColor='' btnName={<><SvgIcon width="15" style={{ verticalAlign: 'text-top', marginRight: '10px' }} fill="#0576a0" />About US</>} href="/about.html" />
@@ -44,12 +44,12 @@ const Home = ({initialReduxState}) => {
         <>
 
             <Head>
-                <title>HomePage</title>
-                <meta name="description" content="A whole-website building solution based on Next.js. It serves as a case to sort out the thinking." />
+                <title>Aloha!</title>
+                <meta name="description" content="Welcome to Shaka Shifts!" />
 
                 <SocialMetadata
-                    ogTitle={`HomePage`}
-                    ogDesc={`A whole-website building solution based on Next.js. It serves as a case to sort out the thinking.`}
+                    ogTitle={`Aloha!`}
+                    ogDesc={`Welcome to Shaka Shifts!`}
                     ogUrl={`${appData.siteUrl}/`}
                     ogImage={`${appData.siteUrl}/assets/images/logo-black.png`}
                 />
@@ -58,7 +58,7 @@ const Home = ({initialReduxState}) => {
             <Layout
                 isHome={true}
                 ssrNav={initialReduxState?.menuData.menuItems}
-                pageTitle="HomePage"
+                pageTitle="Aloha!"
                 contentComponent={<><MainContent /></>}
             />
 
