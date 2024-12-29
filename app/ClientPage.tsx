@@ -45,7 +45,7 @@ export default function ClientPage(props) {
             <Layout
                 isHome={true}
                 ssrNav={props.list}
-                pageTitle="Aloha!"
+                pageTitle="Aloha! 🤙🏻"
                 contentComponent={<><MainContent /></>}
             />
 
