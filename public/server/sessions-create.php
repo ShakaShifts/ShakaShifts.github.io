@@ -1,8 +1,13 @@
 <?php
 session_start();
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-type: application/json');
+
+error_log("POST Data: " . json_encode($_POST));
+error_log("GET Data: " . json_encode($_GET));
+
 
 $certified = false;
 
