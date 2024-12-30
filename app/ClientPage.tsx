@@ -17,7 +17,7 @@ const MainContent = () => {
                 Welcome to Shaka Shifts! Please log in or sign up to manage your shifts.
             </p>
             <p className="buttons">
-                <Button bgColor='' btnName={<><SvgIcon width="15" style={{ verticalAlign: 'text-top', marginRight: '10px' }} fill="#0576a0" />About US</>} href="/about.html" />
+                <Button bgColor='' btnName={<><SvgIcon width="15" style={{ verticalAlign: 'text-top', marginRight: '10px' }} fill="#0576a0" />About the App</>} href="/about.html" />
             </p>
 
 
