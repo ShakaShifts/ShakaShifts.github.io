@@ -12,31 +12,31 @@ const callback = {
             icon: false,
             link: "/about.html"
         },
-        {
-            title: "Nested Routes",
-            icon: false,
-            link: "/nested-routes.html"
-        },
-        {
-            title: "Markdown Render",
-            icon: false,
-            link: "/md-render.html"
-        },
-        {
-            title: "Posts",
-            icon: false,
-            link: "/posts.html"
-        },
-        {
-            title: "Request Cache",
-            icon: false,
-            link: "/request.ajax.html"
-        },
-        {
-            title: "Pagination",
-            icon: false,
-            link: "/pagination/1.html"
-        },
+        //{
+      //  title: "Nested Routes",
+      //    icon: false,
+    //    link: "/nested-routes.html"
+      //  },
+      //{
+      //    title: "Markdown Render",
+      //    icon: false,
+    //    link: "/md-render.html"
+      //  },
+      //{
+      //    title: "Posts",
+      //    icon: false,
+    //    link: "/posts.html"
+      //  },
+      //{
+      //    title: "Request Cache",
+      //    icon: false,
+    //    link: "/request.ajax.html"
+      //  },
+      //{
+      //    title: "Pagination",
+      //    icon: false,
+    //    link: "/pagination/1.html"
+      //  },
         {
             title: "Sign In",
             icon: false,
