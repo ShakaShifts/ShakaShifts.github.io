@@ -48,6 +48,7 @@ export default function ClientPage(props) {
         <>
   
             <Layout
+                isHome={true}
                 pageTitle="Dashboard"
                 contentComponent={<><MainContent /></>}
             />

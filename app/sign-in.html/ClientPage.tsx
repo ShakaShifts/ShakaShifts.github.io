@@ -178,6 +178,7 @@ export default function ClientPage(props) {
         <>
 
             <Layout
+              isHome={true}
                 pageTitle="Sign In"
                 contentComponent={<>
                     {
