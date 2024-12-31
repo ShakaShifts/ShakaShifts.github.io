@@ -107,9 +107,15 @@ footer {
 .page {
     background-color: #7b6b9b;
 
+  background:linear-gradient(
+                  rgba(123, 107, 155, 0.8), /* Top color with opacity */
+                  rgba(91, 64, 147, 0.8)   /* Bottom color with opacity */
+  ), url('http://localhost:3000/assets/images/img.png');
 
-    background-image: -webkit-linear-gradient(#7b6b9b, #5b4093 60%, #4e2f92);
-    background-image: linear-gradient(#7b6b9b, #5b4093 60%, #4e2f92);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
     margin-bottom: 1.5rem;
 
     header {

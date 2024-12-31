@@ -8,45 +8,54 @@ function detailTable(
     id: React.ReactNode | string = '',
     name: React.ReactNode | string = '',
     email: React.ReactNode | string = '',
-    avatar: React.ReactNode | string = ''
+    avatar: React.ReactNode | string = '',
+    dateHired: React.ReactNode | string = ''
 ) {
 
     return (
         <table>
-            <tbody>
-                <tr style={{ display: id != '' ? 'table-row' : 'none' }}>
-                    <td width="138" align="right">
-                        <strong>ID: </strong>
-                    </td>
-                    <td>
-                        {id}
-                    </td>
-                </tr>
-                <tr>
-                    <td width="138" align="right">
-                        <strong>Name: </strong>
-                    </td>
-                    <td>
-                        {name}
-                    </td>
-                </tr>
-                <tr>
-                    <td width="138" align="right">
-                        <strong>Email: </strong>
-                    </td>
-                    <td>
-                        {email}
-                    </td>
-                </tr>
-                <tr>
-                    <td width="138" align="right">
-                        <strong>Avatar: </strong>
-                    </td>
-                    <td>
-                        {avatar}
-                    </td>
-                </tr>
-            </tbody>
+          <tbody>
+          <tr style={{display: id != '' ? 'table-row' : 'none'}}>
+            <td width="138" align="right">
+              <strong>ID: </strong>
+            </td>
+            <td>
+              {id}
+            </td>
+          </tr>
+          <tr>
+            <td width="138" align="right">
+              <strong>Name: </strong>
+            </td>
+            <td>
+              {name}
+            </td>
+          </tr>
+          <tr>
+            <td width="138" align="right">
+              <strong>Email: </strong>
+            </td>
+            <td>
+              {email}
+            </td>
+          </tr>
+          <tr>
+            <td width="138" align="right">
+              <strong>Avatar: </strong>
+            </td>
+            <td>
+              {avatar}
+            </td>
+          </tr>
+          <tr>
+            <td width="138" align="right">
+              <strong>Date Hired: </strong>
+            </td>
+            <td>
+              {dateHired}
+            </td>
+          </tr>
+          </tbody>
         </table>
     );
 }
@@ -54,12 +63,12 @@ function detailTable(
 
 const DataList = () => {
 
-    const [datalist, setDataList] = useState<any[]>([]);
+  const [datalist, setDataList] = useState<any[]>([]);
 
-    // detail container
-    const [detail, setDetail] = useState<any>({
-        display: false,
-        content: 'loading...'
+  // detail container
+  const [detail, setDetail] = useState<any>({
+    display: false,
+    content: 'loading...'
     });    
 
     // form
@@ -73,6 +82,7 @@ const DataList = () => {
         fieldName: '',
         fieldEmail: '',
         fieldAvatar: '',
+      fielddateHired: '',
     });
 
 
@@ -95,7 +105,7 @@ const DataList = () => {
         const _data = response.data.data;
         setDetail({
             display: !detail.display,
-            content: detailTable(_data.id, _data.name, _data.email, <><img src={_data.avatar} width="100" /></>)
+            content: detailTable(_data.id, _data.name, _data.email, <><img src={_data.avatar} width="100" /></>,_data.dateHired)
         });
     }
 
@@ -123,7 +133,8 @@ const DataList = () => {
                     false,
                     <><input type="text" size={20} name="name" /></>,
                     <><input type="text" size={20} name="email" /></>,
-                    <><input type="text" size={35} name="avatar" placeholder="http://" /></>
+                    <><input type="text" size={35} name="avatar" placeholder="http://" /></>,
+                    <><input type="text" size={35} name="Date Hired" placeholder="Date Hired" defaultValue={_data.dateHired} /></>
                 )}
                 <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Submit" onClick={handleSubmit('add')} />
             </form>
@@ -151,7 +162,8 @@ const DataList = () => {
                     false,
                     <><input type="text" size={20} name="name" defaultValue={_data.name} /></>,
                     <><input type="email" size={20} name="email" defaultValue={_data.email} /></>,
-                    <><input type="text" size={35} name="avatar" placeholder="http://" defaultValue={_data.avatar} /></>
+                    <><input type="text" size={35} name="avatar" placeholder="http://" defaultValue={_data.avatar} /></>,
+                  <><input type="text" size={35} name="Date Hired" placeholder="" /></>
                 )}
                 <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Update" onClick={handleSubmit('edit', id)} />
             </form>
@@ -162,7 +174,8 @@ const DataList = () => {
             content: formCode,
             fieldName: _data.name,
             fieldEmail: _data.email,
-            fieldAvatar: _data.avatar
+            fieldAvatar: _data.avatar,
+            fieldDateHired: _data.dateHired
         });
 
     }
@@ -290,7 +303,7 @@ const DataList = () => {
     return (
         <>
 
-            <h4>Data &nbsp;&nbsp;&nbsp;&nbsp;<a style={{ padding: "7px 25px", background: "#191919", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "14px", textDecoration: "none" }} href="#" onClick={handleAddForm}>Add New</a></h4>
+            <h4>Employees &nbsp;&nbsp;&nbsp;&nbsp;<a style={{ padding: "7px 25px", background: "#191919", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "14px", textDecoration: "none" }} href="#" onClick={handleAddForm}>Add New</a></h4>
 
             <hr />
 

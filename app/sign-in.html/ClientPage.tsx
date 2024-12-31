@@ -183,6 +183,7 @@ export default function ClientPage(props) {
                     {
                         (loginOk) ?
                             <div>
+
                                 <Link href="/dashboard/index.html">Go to dashboard</Link>  | <a href="#" onClick={signOut}>Sign out</a>
                             </div>
                             :
