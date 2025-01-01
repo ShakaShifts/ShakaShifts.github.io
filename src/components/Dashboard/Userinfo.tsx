@@ -15,7 +15,7 @@ const Userinfo = () => {
 
     return (
         <>
-            {username !== '' ? <><p style={{ color: "green" }}>&#08730; You need to be authorized after successful login to see this information.</p><p>Your user name is: <code>{username}</code></p><hr /></> : null}
+            {username !== '' ? <><p style={{ color: "white" }}>&#08730; You need to be authorized after successful login to see this information.</p><p>Your user name is: <code>{username}</code></p><hr /></> : null}
 
 
         </>
