@@ -13,7 +13,7 @@ function detailTable(
 ) {
 
     return (
-        <table>
+        <table style ={{color:"black"}}>
           <tbody>
           <tr style={{display: id != '' ? 'table-row' : 'none'}}>
             <td width="138" align="right">
@@ -128,7 +128,7 @@ const DataList = () => {
         e.preventDefault();
 
         const formCode = (
-            <form tabIndex={-1} method="post" style={{ padding: "20px" }}>
+            <form tabIndex={-1} method="post" style={{ padding: "20px", color:"black" }}>
                 {detailTable(
                     false,
                     <><input type="text" size={20} name="name" /></>,
@@ -165,7 +165,7 @@ const DataList = () => {
                     <><input type="text" size={35} name="avatar" placeholder="http://" defaultValue={_data.avatar} /></>,
                   <><input type="text" size={35} name="Date Hired" placeholder="" defaultValue={_data.dateHired} /></>
                 )}
-                <input style={{ padding: "5px 15px", background: "rgb(0 0 0)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Update" onClick={handleSubmit('edit', id)} />
+                <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Update" onClick={handleSubmit('edit', id)} />
             </form>
         );
 
