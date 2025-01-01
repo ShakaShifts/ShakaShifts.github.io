@@ -134,7 +134,7 @@ const DataList = () => {
                     <><input type="text" size={20} name="name" /></>,
                     <><input type="text" size={20} name="email" /></>,
                     <><input type="text" size={35} name="avatar" placeholder="http://" /></>,
-                    <><input type="text" size={35} name="Date Hired" placeholder="Date Hired" defaultValue={_data.dateHired} /></>
+                    <><input type="text" size={35} name="Date Hired" placeholder="Date Hired" /></>
                 )}
                 <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Submit" onClick={handleSubmit('add')} />
             </form>
@@ -157,15 +157,15 @@ const DataList = () => {
         const _data = response.data.data;
 
         const formCode = (
-            <form tabIndex={-1} style={{ padding: "20px" }}>
+            <form tabIndex={-1} style={{ padding: "20px"}} >
                 {detailTable(
                     false,
                     <><input type="text" size={20} name="name" defaultValue={_data.name} /></>,
                     <><input type="email" size={20} name="email" defaultValue={_data.email} /></>,
                     <><input type="text" size={35} name="avatar" placeholder="http://" defaultValue={_data.avatar} /></>,
-                  <><input type="text" size={35} name="Date Hired" placeholder="" /></>
+                  <><input type="text" size={35} name="Date Hired" placeholder="" defaultValue={_data.dateHired} /></>
                 )}
-                <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Update" onClick={handleSubmit('edit', id)} />
+                <input style={{ padding: "5px 15px", background: "rgb(0 0 0)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Update" onClick={handleSubmit('edit', id)} />
             </form>
         );
 
