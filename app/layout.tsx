@@ -44,27 +44,27 @@ export const metadata: Metadata = {
         {
             rel: 'icon',
             type: 'image/x-icon',
-            url: '/assets/images/favicon/favicon-32x32.png',
+            url: '/assets/images/logo2.png',
         },
         {
             rel: 'shortcut icon',
             sizes: '32x32',
-            url: '/assets/images/favicon/favicon-32x32.png',
+            url: '/assets/images/logo2.png',
         },
         {
             rel: 'apple-touch-icon',
             sizes: '57x57',
-            url: '/assets/images/favicon/apple-touch-icon-57x57.png',
+            url: '/assets/images/logo2.png',
         },
         {
             rel: 'apple-touch-icon',
             sizes: '72x72',
-            url: '/assets/images/favicon/apple-touch-icon-72x72.png',
+            url: '/assets/images/logo2.png',
         },
         {
             rel: 'apple-touch-icon',
             sizes: '114x114',
-            url: '/assets/images/favicon/apple-touch-icon-114x114.png',
+            url: '/assets/images/logo2.png',
         },
     ],
 }

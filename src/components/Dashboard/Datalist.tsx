@@ -310,7 +310,7 @@ const DataList = () => {
             <ul>
                 {!datalist ? <>Loading...</> : datalist.map((item: any) => {
                     return (
-                        <li key={item.id}>
+                        <li key={item.id} style = {{color:"black"}}>
                             <a href="#" onClick={handleDetail(item.id)}>({item.id}) {item.name} - {item.email}</a>
 
 

@@ -38,7 +38,8 @@ export default function ClientPage({ currentData, page, perPage }) {
         <>
 
             <Layout
-                pageTitle={`Pagination(page ${page})`}
+                isHome={true}
+                pageTitle={`Manage Your Shifts(page ${page})`}
                 contentComponent={<>
                   <ul>
                     <button>Edit Schedule</button>
@@ -55,6 +56,7 @@ export default function ClientPage({ currentData, page, perPage }) {
 
                   <div>
                         <Pagination
+
                             apiUrl={`/pagination/{page}.html`}
                             gotoPageClickEvent={handleGotoPageNumber}
                             pageRangeDisplayed={2}
