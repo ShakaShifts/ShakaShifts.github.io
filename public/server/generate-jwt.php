@@ -20,6 +20,8 @@ $payload = json_encode(array(
 ));
 
 
+
+
 // Encode Header to Base64Url String
 $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
 

@@ -40,18 +40,20 @@ export default function ClientPage({ currentData, page, perPage }) {
             <Layout
                 pageTitle={`Pagination(page ${page})`}
                 contentComponent={<>
-                    <ul>
+                  <ul>
+                    <button>Edit Schedule</button>
+                    <button>Pick </button>
 
-                        {!posts ? <>Loading...</> : posts.map((item: any, i: number) => {
-                            return (
-                                <li key={i}>
-                                    {item.name} - (email: {item.email})
-                                </li>
-                            );
-                        })}
-                    </ul>
+                    {!posts ? <>Loading...</> : posts.map((item: any, i: number) => {
+                      return (
+                        <li key={i}>
+                          {item.name} - (email: {item.email})
+                        </li>
+                      );
+                    })}
+                  </ul>
 
-                    <div>
+                  <div>
                         <Pagination
                             apiUrl={`/pagination/{page}.html`}
                             gotoPageClickEvent={handleGotoPageNumber}

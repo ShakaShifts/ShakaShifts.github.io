@@ -13,7 +13,7 @@ function detailTable(
 ) {
 
     return (
-        <table style ={{color:"white"}}>
+        <table style ={{color:"black"}}>
           <tbody>
           <tr style={{display: id != '' ? 'table-row' : 'none'}}>
             <td width="138" align="right">

@@ -32,11 +32,11 @@ const callback = {
         //  icon: false,
        // link: "/request.ajax.html"
        // },
-      //{
-        //  title: "Pagination",
-        //  icon: false,
-       // link: "/pagination/1.html"
-       // },
+      {
+          title: "Manage your Shifts",
+          icon: false,
+        link: "/pagination/1.html"
+        },
         {
             title: "Sign In",
             icon: false,
