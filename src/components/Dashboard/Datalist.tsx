@@ -9,7 +9,7 @@ function detailTable(
     name: React.ReactNode | string = '',
     email: React.ReactNode | string = '',
     avatar: React.ReactNode | string = '',
-    dateHired: React.ReactNode | string = ''
+    position: React.ReactNode | string = ''
 ) {
 
     return (
@@ -49,10 +49,10 @@ function detailTable(
           </tr>
           <tr>
             <td width="138" align="right">
-              <strong>Date Hired: </strong>
+              <strong>Position: </strong>
             </td>
             <td>
-              {dateHired}
+              {position}
             </td>
           </tr>
           </tbody>
@@ -82,7 +82,7 @@ const DataList = () => {
         fieldName: '',
         fieldEmail: '',
         fieldAvatar: '',
-      fielddateHired: '',
+      fieldPosition: '',
     });
 
 
@@ -105,7 +105,7 @@ const DataList = () => {
         const _data = response.data.data;
         setDetail({
             display: !detail.display,
-            content: detailTable(_data.id, _data.name, _data.email, <><img src={_data.avatar} width="100" /></>,_data.dateHired)
+            content: detailTable(_data.id, _data.name, _data.email, <><img src={_data.avatar} width="100" /></>,_data.position)
         });
     }
 
@@ -134,7 +134,7 @@ const DataList = () => {
                     <><input type="text" size={20} name="name" /></>,
                     <><input type="text" size={20} name="email" /></>,
                     <><input type="text" size={35} name="avatar" placeholder="http://" /></>,
-                    <><input type="text" size={35} name="Date Hired" placeholder="Date Hired" /></>
+                    <><input type="text" size={35} name="position" /></>
                 )}
                 <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Submit" onClick={handleSubmit('add')} />
             </form>
@@ -163,7 +163,7 @@ const DataList = () => {
                     <><input type="text" size={20} name="name" defaultValue={_data.name} /></>,
                     <><input type="email" size={20} name="email" defaultValue={_data.email} /></>,
                     <><input type="text" size={35} name="avatar" placeholder="http://" defaultValue={_data.avatar} /></>,
-                  <><input type="text" size={35} name="Date Hired" placeholder="" defaultValue={_data.dateHired} /></>
+                  <><input type="text" size={35} name="position" placeholder="" defaultValue={_data.position} /></>
                 )}
                 <input style={{ padding: "5px 15px", background: "rgb(57 57 57)", outline: "none", color: "#fff", borderRadius: "30px", border: "none", fontSize: "12px", marginLeft: "142px" }} type="button" value="Update" onClick={handleSubmit('edit', id)} />
             </form>
@@ -175,7 +175,7 @@ const DataList = () => {
             fieldName: _data.name,
             fieldEmail: _data.email,
             fieldAvatar: _data.avatar,
-            fieldDateHired: _data.dateHired
+            fieldPosition: _data.position
         });
 
     }
